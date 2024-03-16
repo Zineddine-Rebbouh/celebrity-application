@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Late", sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media screen and (max-width: 1077px) {
+  #signup-button {
+    display: none; /* Hide the element on screens with a width of 639px or less */
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* Your CSS styles here */
+  body {
+    background-color: rgb(134, 197, 197);
+  }
+  #navbar-profile,
+  #login-button,
+  #signup-button {
+    display: none; /* Hide the element on screens with a width of 639px or less */
+  }
+}
+/* Custom fade-in/fade-out animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
